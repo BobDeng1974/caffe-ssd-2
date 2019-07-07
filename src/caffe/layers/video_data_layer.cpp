@@ -130,6 +130,7 @@ void VideoDataLayer<Dtype>::load_batch(Batch<Dtype>* batch) {
     if (skip_frames > 0) {
       --skip_frames;
       --item_id;
+      continue; //结束本次循环
     } else {
       skip_frames = skip_frames_;
       timer.Start();
